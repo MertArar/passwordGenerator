@@ -1,7 +1,8 @@
-import React from "react";
+export function generateCharcodesArray(start, end) {
+  const charcodes = [];
 
-const charcodesGenerator = () => {
-  return <div>charcodesGenerator</div>;
-};
-
-export default charcodesGenerator;
+  for (let i = start; i <= end; i++) {
+    charcodes.push(i);
+  }
+  return charcodes;
+}
