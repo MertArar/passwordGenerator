@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { Icon } from "@iconify/react";
+
+import Footer from "./components/Footer/Footer";
+import Generator from "./components/Generator/Generator";
+import PasswordOutput from "./components/PasswordOutput/PasswordOutput";
+import useColorMode from "./hooks/useColorMode";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [password, setPassword] = useState("");
+  const [isCopied, setIsCopied] = useState(false);
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <main>
+        <section>
+          <h1>Password Generator</h1>
+          <button>
+            <Icon />
+          </button>
+        </section>
+        <PasswordOutput />
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
