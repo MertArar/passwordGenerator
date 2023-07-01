@@ -1,7 +1,9 @@
-import React from "react";
+export function getRandomCharacters(charcodes, length) {
+  const randomizedCharcodes = [];
 
-const getRandomCharacters = () => {
-  return <div>getRandomCharacters</div>;
-};
-
-export default getRandomCharacters;
+  for (let i = 0; i < length; i++) {
+    const charcode = charcodes[Math.floor(Math.random() * charcodes.length)];
+    randomizedCharcodes.push(String.fromCharCode(charcode));
+  }
+  return randomizedCharcodes.join("");
+}
