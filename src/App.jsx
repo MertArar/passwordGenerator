@@ -19,6 +19,7 @@ function App() {
           </button>
         </section>
         <PasswordOutput />
+        <Generator />
       </main>
       <Footer />
     </div>
