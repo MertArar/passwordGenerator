@@ -4,5 +4,6 @@ export function generateCharcodesArray(start, end) {
   for (let i = start; i <= end; i++) {
     charcodes.push(i);
   }
+
   return charcodes;
 }

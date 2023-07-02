@@ -5,5 +5,6 @@ export function getRandomCharacters(charcodes, length) {
     const charcode = charcodes[Math.floor(Math.random() * charcodes.length)];
     randomizedCharcodes.push(String.fromCharCode(charcode));
   }
+
   return randomizedCharcodes.join("");
 }

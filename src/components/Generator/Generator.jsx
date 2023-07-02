@@ -34,7 +34,7 @@ const Generator = ({ setPassword, setIsCopied }) => {
       !parameters.numbers &&
       !parameters.symbols
     ) {
-      return "You must select 1 option at least!";
+      return "You must select 1 option at least";
     }
     let charcodes = [];
     if (parameters.lowercase) charcodes = charcodes.concat(LOWER_CHARCODES);
@@ -45,10 +45,13 @@ const Generator = ({ setPassword, setIsCopied }) => {
   };
 
   return (
-    <article className="flex flex-col w-full gap-4 px-6 rounded-md dark:bg-greyDark bg-greyWhite">
-      <Length />
-      <Parameters />
-      <Strength />
+    <article className="flex flex-col w-full gap-4 px-6 py-4 rounded-md dark:bg-greyDark bg-greyWhite">
+      <Length
+        passwordLength={passwordLength}
+        setPasswordLength={setPasswordLength}
+      />
+      <Parameters parameters={parameters} setParameters={setParameters} />
+      <Strength length={passwordLength} parameters={parameters} />
       <button
         className="p-3 text-xl font-semibold transition-all ease-in-out rounded-md bg-primary hover:scale-105 hover:drop-shadow"
         onClick={() =>
@@ -60,5 +63,4 @@ const Generator = ({ setPassword, setIsCopied }) => {
     </article>
   );
 };
-
 export default Generator;
