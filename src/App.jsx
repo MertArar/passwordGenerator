@@ -15,7 +15,7 @@ function App() {
     <div className="flex flex-col items-center min-h-screen px-2 text-black transition-all ease-in-out bg-white dark:bg-black dark:text-white font-primary">
       <main className="flex flex-col items-center w-full max-w-xs gap-4 rounded-lg sm:max-w-xl">
         <section className="flex flex-col items-center justify-between w-full gap-4 mt-24">
-          <h1 className="text-3xl font-semibold">Password generator</h1>
+          <h1 className="text-3xl font-semibold">Password Generator</h1>
           <button
             onClick={() =>
               setColorMode(colorMode === "light" ? "dark" : "light")
