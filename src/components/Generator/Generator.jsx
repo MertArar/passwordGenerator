@@ -49,7 +49,12 @@ const Generator = ({ setPassword, setIsCopied }) => {
       <Length />
       <Parameters />
       <Strength />
-      <button className="p-3 text-xl font-semibold transition-all ease-in-out rounded-md bg-primary">
+      <button
+        className="p-3 text-xl font-semibold transition-all ease-in-out rounded-md bg-primary hover:scale-105 hover:drop-shadow"
+        onClick={() =>
+          setPassword(generatePassword(parameters, passwordLength))
+        }
+      >
         Generate
       </button>
     </article>
