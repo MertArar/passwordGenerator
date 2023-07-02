@@ -7,7 +7,6 @@ const useColorMode = () => {
   useEffect(() => {
     const className = "dark";
     const bodyClasses = window.document.body.classList;
-
     if (
       colorMode === "default" &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -15,7 +14,7 @@ const useColorMode = () => {
       setColorMode("dark");
     }
     if (
-      colorMode === "light" &&
+      colorMode === "default" &&
       !window.matchMedia("(prefers-color-scheme: dark)").matches
     ) {
       setColorMode("light");
@@ -27,5 +26,4 @@ const useColorMode = () => {
 
   return [colorMode, setColorMode];
 };
-
 export default useColorMode;
